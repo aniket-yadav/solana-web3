@@ -7,7 +7,7 @@ part of 'message.dart';
 // **************************************************************************
 
 Message _$MessageFromJson(Map<String, dynamic> json) => Message(
-      version: json['version'] as int?,
+      version: (json['version'] as num?)?.toInt(),
       accountKeys: (json['accountKeys'] as List<dynamic>)
           .map((e) => Pubkey.fromJson(e as String))
           .toList(),
